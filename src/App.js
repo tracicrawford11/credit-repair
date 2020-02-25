@@ -1,7 +1,8 @@
 import React from 'react';
-import {HashRouter, Route} from 'react-router-dom'
+import {HashRouter} from 'react-router-dom'
 import './reset.css'
 import './App.css';
+import routes from './routes'
 
 class App extends React.Component {
   constructor () {
@@ -14,10 +15,7 @@ class App extends React.Component {
     return (
       <HashRouter>
       <div className="App">
-        
-        <Route />
-        <Route />
-        
+        {routes}
       </div>
       </HashRouter>
     );

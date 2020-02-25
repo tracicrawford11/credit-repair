@@ -37,7 +37,7 @@ render () {
                 <a className='box1'>
                     <h1>Analyze</h1>
                     <p>We work with you to identify any questionable negative item hurting your score.</p>
-                <a/>
+                </a>
                 <a className='box2'>
                     <h1>Address</h1>
                     <p>We challenge those negative item with the bureaus and your creditors.</p>

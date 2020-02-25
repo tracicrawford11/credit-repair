@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import axios from "axios"
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
@@ -28,7 +28,7 @@ class GetStarted extends Component {
         })
     }
     handleClick = () => {
-        axios.post ('/auth/getstarted', {...this.state}).then (response => {
+        axios.post ('/auth/get-started', {...this.state}).then (response => {
             this.setState({ shouldRedirect: true})
         })
     }
@@ -53,4 +53,4 @@ class GetStarted extends Component {
     } 
         
 }
-export default connect (GetStarted)
+export default connect(null, {})(GetStarted)
