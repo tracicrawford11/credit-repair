@@ -4,14 +4,15 @@ import './reset.css'
 import './App.css';
 import routes from './routes'
 
-class App extends React.Component {
+/*class App extends React.Component {
   constructor () {
     super()
     this.state = {
 
     }
   }
-  render () {
+  render () {*/
+  function App() { 
     return (
       <HashRouter>
       <div className="App">
@@ -20,7 +21,7 @@ class App extends React.Component {
       </HashRouter>
     );
   }
-}
+
   
 
 export default App;

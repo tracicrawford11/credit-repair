@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import axios from "axios"
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 class GetStarted extends Component {
@@ -28,7 +28,7 @@ class GetStarted extends Component {
         })
     }
     handleClick = () => {
-        axios.post ('/auth/get-started', {...this.state}).then (response => {
+        axios.post ('/auth/getstarted', {...this.state}).then (response => {
             this.setState({ shouldRedirect: true})
         })
     }
@@ -44,13 +44,12 @@ class GetStarted extends Component {
                 <input onChange={this.handleChange} name='phone' placeholder='Phone Number' />
                 <input onChange={this.handleChange} name='state' placeholder='State Abbreviated' />
                 <select onChange={this.handleChange} name='goal'>{this.state.goalAnswers.map(answer => (
-                    <option>{answer}</option>
-                ))}
+                    <option>{answer}</option>))}
+                <option value="" disabled selected hidden>Select your goal</option>
                 </select>
-                <button onClick={this.handleClick}>Submit</button>
+                <Link to='/getstartedconfirmation'><button onClick={this.handleClick}>Submit</button></Link>
             </div>
         )
-    } 
-        
+    }
 }
 export default connect(null, {})(GetStarted)

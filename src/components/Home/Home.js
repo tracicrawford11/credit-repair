@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Link } from 'react-router-dom'
 
 class Home extends Component {
     
@@ -8,13 +9,11 @@ render () {
             <nav>
                 <h2>Credit Repair</h2>
                 <ul className='navbar'>
-                    <li>Home</li>
-                    <li>How it Works</li>
-                    <li>Education</li>
-                    <li>Services</li>
-                    <li>Contact</li>
-                    <li>Get Started!</li>
-                    <li>Client Login</li>
+                    <li><Link to='/'><button>Home</button></Link></li>
+                    <li><Link to='/services'><button>Services</button></Link></li>
+                    <li><Link to='/contact'><button>Contact</button></Link></li>
+                    <li><Link to='/getstarted'><button>Get Started!</button></Link></li>
+                    <li><Link to='/login'><button>Client Login</button></Link></li>
                 </ul>
             </nav>
 
@@ -52,7 +51,7 @@ render () {
                 <h1>Education</h1>
                 <a className='legal-box'>
                     <h1>Is Credit Repair Legal?</h1>
-                    <p>Credit repair is legal option for those with less-than-great credit scores. 
+                    <p>Credit repair is a legal option for those with less-than-great credit scores. 
                        However, before working with just any company that promises to improve credit scores, 
                        it is important to determine whether or not that company is operating within the 
                        boundaries of the law.</p>

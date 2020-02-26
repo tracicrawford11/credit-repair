@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { login } from '../../redux/reducer'
 
@@ -31,7 +32,7 @@ class Login extends React.Component {
                 <h1>Please enter your email and password to see your profile.</h1>
                 <input placeholder="Email" onChange={(e) => this.setState({ email: e.target.value})} />
                 <input placeholder="Password" onChange={(e) => this.setState({ password: e.target.value})} />
-                <button type='submit'>Log In</button>
+                <Link to='/profile'><button type='submit'>Log In</button></Link>
             </div>
         )
     }
