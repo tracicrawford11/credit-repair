@@ -1,3 +1,4 @@
+import URL from '../api'
 import axios from 'axios'
 
 const initialState = {
@@ -16,7 +17,7 @@ const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 const CHECKOUT = 'CHECKOUT'
 const LOGOUT = 'LOGOUT'
 
-export default function (state=initialState, action) {
+export default function reducer (state=initialState, action) {
     let {payload} = action
     switch (action.type) {
         case LOGIN + '_FULFILLED':
@@ -51,6 +52,46 @@ export function login (obj, history) {
 }
 export function getstarted (obj, history) {
     return {
-        
+        type: GETSTARTED,
+        payload: axios.post (URL.getstarted, obj).then (response => {
+            history.push('/login')
+            return response.data
+        })
+    }
+}
+export function getUser () {
+    return {
+        type: GET_USER,
+        payload: axios.get (URL.user).then(response => response.data)
+    }
+}
+export function getProd() {
+    return {
+        type: GET_PROD,
+        payload: axios.get(URL.prod).then(response => response.data)
+    }
+}
+export function addToCart(id) {
+    return {
+        type: ADD_TO_CART,
+        payload: axios.post (`${URL.cart}/${id}`).then(response => response.data)
+    }
+}
+export function removeFromCart (id) {
+    return {
+        type: REMOVE_FROM_CART,
+        payload: axios.delete(`${URL.cart}/${id}`).then(response => response.data)
+    }
+}
+export function checkout() {
+    return {
+        type: CHECKOUT,
+        payload: axios.post(URL.checkout).then(response => response.data)
+    }
+}
+export function logout(history) {
+    return {
+        type: LOGOUT,
+        payload: axios.post(URL.logout).then( () => history.push('/'))
     }
 }

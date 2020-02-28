@@ -3,7 +3,7 @@ const prod = require ('../models/prod')
 module.exports = {
     add: (req, res) => {
         const {id} = req.params
-        let {user} = req.session
+        const {user} = req.session
         const index = prod.findIndex(prod => prod.id == id)
         if (index !== -1) {
             const selectedProd = prod[index]

@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import './Contact.scss'
 //import axios from 'axios'
 //import {Link} from 'react-router-dom'
 
@@ -55,17 +56,19 @@ render() {
                     </a>
                 </section>
             </div>
-            <div>
-                <input onChange={this.handleChange} name ='name' placeholder='Name' />
-                <input onChange={this.handleChange} name='email' placeholder='Email' />
-                <input onChange={this.handleChange} name='phone' placeholder='Phone Number' />
-                <input onChange={this.handleChange} name='message' placeholder='Message' />
-                <select onChange={this.handleChange} name='method'>{this.state.preferredMethod.map(answer => (
-                    <option>{answer}</option>))}
-                <option value="" disabled selected hidden>Preferred Contact Method</option>
-                </select>
-                <button onClick={this.handleClick}>Submit</button>
-            </div>
+         <div>
+            <input onChange={this.handleChange} name ='name' placeholder='Name' />
+            <input onChange={this.handleChange} name='email' placeholder='Email' />
+            <input onChange={this.handleChange} name='phone' placeholder='Phone Number' />
+            <input onChange={this.handleChange} name='message' placeholder='Message' />
+            <select onChange={this.handleChange} name='method'>{this.state.preferredMethod.map(answer => (
+                <option>{answer}</option>))}
+            <option value="" disabled selected hidden>Preferred Contact Method</option>
+            </select>
+            <button onClick={this.handleClick}>Submit</button>
+        </div> 
+            
+        
         </div>
     )
   }
