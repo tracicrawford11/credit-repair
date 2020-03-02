@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import axios from "axios"
 import { Redirect, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import './GetStarted.scss'
 
 class GetStarted extends Component {
     constructor () {
@@ -10,17 +11,16 @@ class GetStarted extends Component {
             first_name: '',
             last_name: '',
             email: '',
+            password: '',
             phone: '',
             state: '',
-            goalAnswers: [
-                'Purchase Home',
-                'Buy a Car',
-                'Get an apartment',
-                'Get a loan',
-                'Just want to increase my scores'
-            ],
+            goal_id: 0,
+            goalAnswers: [],
             shouldRedirect: false
         }
+    }
+    componentDidMount() {
+        axios.get('/auth/goals').then(response => this.setState({goalAnswers: response.data}))
     }
     handleChange = (e) => {
         this.setState({
@@ -28,8 +28,9 @@ class GetStarted extends Component {
         })
     }
     handleClick = () => {
-        axios.post ('/auth/getstarted', {...this.state}).then (response => {
+        axios.post('/auth/getstarted', {...this.state}).then(response => {
             this.setState({ shouldRedirect: true})
+            // axios.post('/api/send', this.state.email)
         })
     }
     render () {
@@ -37,14 +38,15 @@ class GetStarted extends Component {
             return <Redirect to = '/login' />
         }
         return (
-            <div>
+            <div className="inputs">
                 <input onChange={this.handleChange} name ='first_name' placeholder='First Name' />
                 <input onChange={this.handleChange} name ='last_name' placeholder='Last Name' />
                 <input onChange={this.handleChange} name='email' placeholder='Email' />
+                <input onChange={this.handleChange} name='password' placeholder='Password' />
                 <input onChange={this.handleChange} name='phone' placeholder='Phone Number' />
                 <input onChange={this.handleChange} name='state' placeholder='State Abbreviated' />
-                <select onChange={this.handleChange} name='goal'>{this.state.goalAnswers.map(answer => (
-                    <option>{answer}</option>))}
+                <select onChange={this.handleChange} name='goal_id'>{this.state.goalAnswers.map(answer => (
+                    <option value={+answer.goal_id}>{answer.goal}</option>))}
                 <option value="" disabled selected hidden>Select your goal</option>
                 </select>
                 <Link to='/getstartedconfirmation'><button onClick={this.handleClick}>Submit</button></Link>

@@ -35,7 +35,7 @@ render() {
     return ( 
         <div>
             <div>
-                <h1>Contact Information</h1>
+                <h1 className='contact'>Contact Information</h1>
                 <section className='boxes'>
                     <a className='address'>
                         <h1>Address</h1>
@@ -56,7 +56,7 @@ render() {
                     </a>
                 </section>
             </div>
-         <div>
+         <div className='inputs'>
             <input onChange={this.handleChange} name ='name' placeholder='Name' />
             <input onChange={this.handleChange} name='email' placeholder='Email' />
             <input onChange={this.handleChange} name='phone' placeholder='Phone Number' />

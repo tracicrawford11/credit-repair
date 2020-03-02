@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import './Checkout.scss'
 import {connect} from 'react-redux'
 import {removeFromCart, Checkout} from '../../redux/reducer'
-import {BackArrow} from 'react-icons/lib/fa/arrow-left'
 
 class Checkout extends Component {
     constructor () {
@@ -21,10 +20,7 @@ class Checkout extends Component {
         ))
     }
         return (
-            //<div id="backToServices" onClick={this.backToServices}>
-              //  <BackArrow id="backArrow" />
-                //<span>Back to Services</span>
-            //</div>
+            
 
             
     )
