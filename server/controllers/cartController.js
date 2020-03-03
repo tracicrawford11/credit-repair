@@ -1,3 +1,6 @@
+require('dotenv').config()
+const bcrypt = require('bcryptjs')
+const sgMail = require('@sendgrid/mail')
 const prod = require ('../models/prod')
 
 module.exports = {

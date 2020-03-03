@@ -17,7 +17,6 @@ render () {
                     <li><Link to='/login'><button>Client Login</button></Link></li>
                 </ul>
             </nav>
-
             <section className='background-container'>
 
             </section>
