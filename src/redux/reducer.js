@@ -16,6 +16,7 @@ const ADD_TO_CART = 'ADD_TO_CART'
 const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 const CHECKOUT = 'CHECKOUT'
 const LOGOUT = 'LOGOUT'
+const GET_USER_DATA = 'GET_USER_DATA'
 
 export default function reducer (state=initialState, action) {
     let {payload} = action
@@ -38,6 +39,8 @@ export default function reducer (state=initialState, action) {
             return Object.assign({}, state, {cart: payload.cart, total: payload.total})
         case LOGOUT + '_FULFILLED':
             return {user: '', prod: [], cart: [], total: 0}
+        case GET_USER_DATA + '_FULFILLED':
+            return Object.assign({}, state, {profile: payload.profile})
         default: return state
     }
 }
@@ -93,5 +96,11 @@ export function logout(history) {
     return {
         type: LOGOUT,
         payload: axios.post(URL.logout).then( () => history.push('/'))
+    }
+}
+export function getUserData() {
+    return {
+        type: GET_USER_DATA,
+        payload: axios.get(URL.profile)
     }
 }

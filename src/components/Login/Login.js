@@ -15,14 +15,14 @@ class Login extends React.Component {
     }
     async componentDidMount() {
         let res = await axios.get('/auth/user-data')
-        if (res.data.loggedIn) this.props.history.push('/profile')
+        if (res.data.id) this.props.history.push('/profile')
     }
-    async login(e) {
-        if (e) e.preventDefault ()
+    login = async() => {
+        //if (e) e.preventDefault()
         const {email, password} = this.state
         try {
             const res = await axios.post('/auth/login', {email, password})
-            if (res.data.loggedIn) this.props.history.push('/profile')
+            if (res.data.id) this.props.history.push('/profile')
         }catch (e) {
             alert ('Login failed. Please try again')
         }
@@ -33,7 +33,7 @@ class Login extends React.Component {
                 <h1>Please enter your email and password to see your profile.</h1>
                 <input placeholder="Email" onChange={(e) => this.setState({ email: e.target.value})} />
                 <input placeholder="Password" onChange={(e) => this.setState({ password: e.target.value})} />
-                <Link to='/profile'><button type='submit'>Log In</button></Link>
+                <button type='submit' onClick={this.login}>Log In</button>
             </div>
         )
     }

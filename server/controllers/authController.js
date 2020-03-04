@@ -41,7 +41,7 @@ const getStarted = (req, res) => {
 const login = (req, res) => {
     const db = req.app.get('db')
     const {email, password} = req.body
-    db.authentication.getUser(email).then(user => {
+    db.auth.getUser(email).then(user => {
         if(user.length === 0) {
             res.status(400).json('User does not exist')
         } else {
@@ -52,7 +52,7 @@ const login = (req, res) => {
                         id: user_id,
                         email: email,
                     }
-                    res.status(200).json(email)
+                    res.status(200).json(req.session.user)
                 } else {
                     res.status(403).json('Incorrect email or password')
                 }

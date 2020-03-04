@@ -1,14 +1,14 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
-import './Home.scss'
+import './Home.css'
 
 class Home extends Component {
     
 render () {
     return (
         <div>
-            <nav>
-                <h2>Credit Repair</h2>
+            <nav className="topnav">
+                <h2>Credit Repair by Crawford</h2>
                 <ul className='navbar'>
                     <li><Link to='/'><button>Home</button></Link></li>
                     <li><Link to='/services'><button>Services</button></Link></li>

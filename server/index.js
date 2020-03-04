@@ -8,6 +8,7 @@ const prodController = require('./controllers/prodController')
 const authController = require('./controllers/authController')
 const cartController = require ('./controllers/cartController')
 const goalsController = require('./controllers/goalsController')
+const profileController = require('./controllers/profileController')
 
 const sgMail = require('@sendgrid/mail')
 
@@ -63,5 +64,6 @@ app.post('/api/cart/:id', cartController.add)
 app.delete('/api/cart/:id', cartController.delete)
 
 app.get('/auth/goals', goalsController.getGoals)
+app.get('/api/profile/', profileController.getUserData)
 
 app.listen(SERVER_PORT, () => console.log (`Listening on Port: ${SERVER_PORT}`))

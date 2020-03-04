@@ -5,5 +5,6 @@ export default {
     getstarted: '/api/getstarted',
     logout: '/api/logout',
     user: '/api/user',
-    checkout: '/api/cart/checkout'
+    checkout: '/api/cart/checkout',
+    profile: '/api/profile'
 }
