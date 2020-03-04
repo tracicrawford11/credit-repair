@@ -16,15 +16,6 @@ class Cart extends Component {
   handleSubtractQuantity = (id) => {
     this.props.subtractQuantity(id)
   }
-  // constructor () {
-  //   super()
-  //   this.state = {
-  //     cart: []
-  //   }
-  // }
-  // componentDidMount() {
-  //   axios.get('/api/cart').then(response => this.setState({cart: response.data}))
-  // }
   
   render() {
     let addedServices = this.props.services.length ? 
@@ -33,8 +24,7 @@ class Cart extends Component {
         <div key={service.id}>
           <div className='description'>
             <span className='prod_name'>{service.prod_name}</span>
-            <p>{service.description}</p>
-            <p><b>Price: {service.price}$</b></p>
+            <p><b>Price: ${service.price}</b></p>
             <p><b>Quantity: {service.quantity}</b></p>
           </div>
         </div>
@@ -69,44 +59,3 @@ const mapDispatchToProps = (dispatch) => {
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Cart)
 
-//   const mappedCart = this.state.cart.map((val, index) => {
-//     return (
-//       <div key={index}>
-//         <h1>{val.cart}</h1>
-
-//       </div>
-//     )
-//   })
-//     return ( 
-//       <div>
-//         <h1>Cart</h1>
-//         <section>
-//           {mappedCart}
-//         </section>
-//       </div>
-//     )
-//   }
-// }
-// const mapStateToProps = state => {
-//   return {
-//     cart: state.cart
-//   }
-// }
-
-//export default connect/*(mapStateToProps, {mappedCart}) */(Cart)
-
-// import React, {PureComponent} from 'react'
-// import { Provider } from "react-redux";
-// import { createStore, combineReducers } from "redux";
-// import {
-//   Cart,
-//   Product,
-//   CheckoutButton,
-//   cartLocalization,
-//   cartReducer,
-//   setCartCurrency
-// } from "react-shopping-cart";
-
-// import "bootstrap/dist/css/bootstrap.css"
-// import "animate.css/animate.min.css"
-//import "font-awesome/css/font-awesome.min.css"
