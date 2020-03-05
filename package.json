@@ -10,12 +10,17 @@
     "@testing-library/user-event": "^7.2.1",
     "async": "^3.2.0",
     "axios": "^0.19.2",
+    "babel-polyfill": "^6.26.0",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
+    "history": "^4.10.1",
     "massive": "^6.2.0",
     "node-sass": "^4.13.1",
+    "parcel": "^1.12.4",
+    "parcel-bundler": "^1.12.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-icons": "^3.9.0",
@@ -23,14 +28,19 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "react-shopping-cart": "^1.8.32",
+    "react-stripe-elements": "^6.1.0",
     "redux": "^4.0.5",
-    "redux-promise-middleware": "^6.1.2"
+    "redux-promise-middleware": "^6.1.2",
+    "stripe": "^8.27.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build2": "parcel build public/index.html --out-dir build --no-source-maps",
+    "dev": "node src/server.js & parcel public/index.html",
+    "start2": "node src/server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
