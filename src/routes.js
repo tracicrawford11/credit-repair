@@ -10,12 +10,14 @@ import Services from './components/Services/Services'
 import OrderConfirmation from './components/Confirmation/OrderConfirmation'
 import Contact from './components/Contact/Contact'
 import ContactConfirmation from './components/Confirmation/ContactConfirmation'
+import CheckoutForm from './components/Checkout/CheckoutForm'
 
 export default (
     <Switch>
         <Route path='/login' component={Login} />
         <Route path='/profile' component={Profile} />
         <Route path='/cart' component={Cart} />
+        <Route path='/checkout' component={CheckoutForm} />
         <Route path='/getstarted' component={GetStarted} />
         <Route path='/getstartedconfirmation' component={GetStartedConfirmation} />
         <Route path='/services' component={Services} />

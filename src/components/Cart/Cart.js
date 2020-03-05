@@ -40,6 +40,7 @@ class Cart extends Component {
           <ul className='collection'>
             {addedServices}
           </ul>
+          <Link to='/checkout'><button>Continue to Checkout</button></Link>
         </div>
       </div>
     )
