@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './Checkout.scss'
+// import './Checkout.scss'
 import {connect} from 'react-redux'
 import {removeFromCart, Checkout} from '../../redux/reducer'
 

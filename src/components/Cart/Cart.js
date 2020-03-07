@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-import './Cart.scss'
+// import './Cart.scss'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {removeService, addQuantity, subtractQuantity} from './../../redux/cartReducer'

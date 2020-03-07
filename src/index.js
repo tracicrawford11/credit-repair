@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
+//import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
 import store from './redux/store'
+import './styles/main.css'
 
 // //Stripe imports
 import { StripeProvider, Elements } from '@stripe/react-stripe-js'

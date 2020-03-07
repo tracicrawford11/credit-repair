@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './Contact.scss'
+// import './Contact.scss'
 //import axios from 'axios'
 //import {Link} from 'react-router-dom'
 

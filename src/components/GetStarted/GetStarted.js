@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import axios from "axios"
 import { Redirect, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import './GetStarted.scss'
+// import './GetStarted.scss'
 
 class GetStarted extends Component {
     constructor () {

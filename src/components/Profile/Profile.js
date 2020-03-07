@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import axios from 'axios'
-import './Profile.scss'
 import {getUserData} from './../../redux/reducer'
 
 class Profile extends Component {
@@ -37,6 +36,7 @@ render() {
         <section>
           {mappedProfile}
         </section>
+        <button>Update Profile</button>
         <Link to='/'><button>Return to Home</button></Link>
 
       </div>

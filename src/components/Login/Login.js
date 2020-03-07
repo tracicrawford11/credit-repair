@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { login } from '../../redux/reducer'
-import './Login.scss'
+// import './Login.scss'
 
 class Login extends React.Component {
     constructor (props) {
