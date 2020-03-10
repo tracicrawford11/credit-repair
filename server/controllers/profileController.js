@@ -7,6 +7,11 @@ const getUserData = (req, res) => {
     db.auth.getUserData(req.session.user.id).then(response => res.status(200).json(response))
 
 }
+const updateUserPhone = (req, res) => {
+    const db = req.app.get('db')
+    db.auth.UpdateUserPhone(req.body.phone, req.session.user.id).then(response => res.status(200).json(response))
+}
 module.exports = {
-    getUserData
+    getUserData,
+    updateUserPhone
 }

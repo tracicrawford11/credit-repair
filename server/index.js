@@ -112,5 +112,6 @@ app.delete('/api/cart/:id', cartController.delete)
 
 app.get('/auth/goals', goalsController.getGoals)
 app.get('/api/profile/', profileController.getUserData)
+app.put('/auth/profile', profileController.updateUserPhone)
 
 app.listen(SERVER_PORT, () => console.log (`Listening on Port: ${SERVER_PORT}`))

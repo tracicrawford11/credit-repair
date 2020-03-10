@@ -8,7 +8,7 @@ render () {
     return (
         <div>
             <nav className="topnav">
-                <h2>Credit Repair by Crawford</h2>
+                <h2 className='crc'>Credit Repair by Crawford</h2>
                 <ul className='navbar'>
                     <li><Link to='/'><button>Home</button></Link></li>
                     <li><Link to='/services'><button>Services</button></Link></li>
@@ -54,13 +54,21 @@ render () {
 
             <section className='education'>
                 <h1 className='edu'>Education</h1>
-                <a className='legal-box'>
-                    <h1>Is Credit Repair Legal?</h1>
-                    <p>Credit repair is a legal option for those with less-than-great credit scores. 
-                       However, before working with just any company that promises to improve credit scores, 
-                       it is important to determine whether or not that company is operating within the 
-                       boundaries of the law.</p>
-                </a>
+                <article className='education-boxes'>
+                    <a className='edbox1'>
+                        <h1>Is Credit Repair Legal?</h1>
+                        <p>Credit repair is a legal option for those with less-than-great credit scores. 
+                        However, before working with just any company that promises to improve credit scores, 
+                        it is important to determine whether or not that company is operating within the 
+                        boundaries of the law.</p>
+                    </a>
+                    <a className='edbox2'>
+                        <h1>What Makes Up Your Score?</h1>
+                    </a>
+                    <a className='edbox3'>
+
+                    </a>
+                </article>
             </section>
 
         </div>

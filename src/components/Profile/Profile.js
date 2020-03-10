@@ -8,12 +8,16 @@ class Profile extends Component {
   constructor () {
     super()
     this.state = {
-      profile: []
+      profile: [],
+      phone: ''
     }
   }
   componentDidMount() {
     axios.get('/api/profile').then(response => this.setState({profile: response.data}))
     this.props.getUserData()
+  }
+  updateUserPhone = () => {
+    axios.put('/auth/profile', {phone: this.state.phone})
   }
 render() {
   const mappedProfile = this.state.profile.map((val, index) => {
@@ -36,7 +40,9 @@ render() {
         <section>
           {mappedProfile}
         </section>
-        <button>Update Profile</button>
+        <button>Update Phone Number</button>
+        <input placeholder ='Enter New Phone Number' name="phone" onChange={e => this.setState({phone: e.target.value})}></input>
+        <button type='submit' onClick ={this.updateUserPhone}>Submit</button>
         <Link to='/'><button>Return to Home</button></Link>
 
       </div>

@@ -1,0 +1,29 @@
+#remove {
+    cursor: pointer;
+    font-size: 15px;
+}
+#remove :hover {
+    background-color: royalblue;
+    color: white;
+}
+.checkout {
+    cursor: pointer;
+    font-size: 15px;
+}
+checkout :hover {
+    background-color: royalblue;
+    color: white
+}
+.cart {
+    display: flex;
+    width: 100vw;
+    height: 75px;
+    background-color: wheat;
+    align-items: center;
+    justify-content: space-around;
+}
+.description {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}

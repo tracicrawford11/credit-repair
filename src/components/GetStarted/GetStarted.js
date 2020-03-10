@@ -16,7 +16,8 @@ class GetStarted extends Component {
             state: '',
             goal_id: 0,
             goalAnswers: [],
-            shouldRedirect: false
+            shouldRedirect: false,
+            message: ''
         }
     }
     componentDidMount() {
@@ -49,6 +50,7 @@ class GetStarted extends Component {
                     <option value={+answer.goal_id}>{answer.goal}</option>))}
                 <option value="" disabled selected hidden>Select your goal</option>
                 </select>
+                {/* <input onChange ={this.handleChange} name = 'message' placeholder='message'/> */}
                 <Link to='/getstartedconfirmation'><button onClick={this.handleClick}>Submit</button></Link>
             </div>
         )

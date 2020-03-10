@@ -26,6 +26,8 @@ class Cart extends Component {
             <span className='prod_name'>{service.prod_name}</span>
             <p><b>Price: ${service.price}</b></p>
             <p><b>Quantity: {service.quantity}</b></p>
+            <button id='remove' onClick={this.handleRemove}>Remove Item from Cart</button>
+            <br/>
           </div>
         </div>
       )
@@ -35,13 +37,14 @@ class Cart extends Component {
     )
     return (
       <div className='container'>
-        <div className='cart'>
-          <h3>You have ordered:</h3>
-          <ul className='collection'>
-            {addedServices}
-          </ul>
-          <Link to='/checkout'><button>Continue to Checkout</button></Link>
-        </div>
+        <header className='cart'>
+          <h1 className='ordered'>You have ordered:</h1>
+          <Link to='/checkout'><button className='checkout'>Continue to Checkout</button></Link>
+        </header>
+        <ul className='collection'>
+          {addedServices}
+          <br/>
+        </ul>
       </div>
     )
   }

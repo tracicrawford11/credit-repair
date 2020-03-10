@@ -90,7 +90,7 @@ export default function cartReducer (state=initialState, action) {
     if(action.type === REMOVE_SERVICE){
         let serviceToRemove= state.addedServices.find(service=> action.id === service.id)
         let new_services = state.addedServices.filter(service=> action.id !== service.id)
-            
+        console.log(serviceToRemove)    
             //calculating the total
         let newTotal = state.total - (serviceToRemove.price * serviceToRemove.quantity )
         console.log(serviceToRemove)

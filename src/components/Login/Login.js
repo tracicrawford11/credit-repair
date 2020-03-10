@@ -29,11 +29,15 @@ class Login extends React.Component {
     }
     render () {
         return (
-            <div className='login'>
-                <h1>Please enter your email and password to see your profile.</h1>
-                <input placeholder="Email" onChange={(e) => this.setState({ email: e.target.value})} />
-                <input placeholder="Password" onChange={(e) => this.setState({ password: e.target.value})} />
-                <button type='submit' onClick={this.login}>Log In</button>
+            <div>
+                <header>
+                    <h1>Please enter your email and password to see your profile.</h1>
+                </header>
+                <section className='login'>
+                    <input placeholder="Email" onChange={(e) => this.setState({ email: e.target.value})} />
+                    <input placeholder="Password" onChange={(e) => this.setState({ password: e.target.value})} />
+                    <button className='log' type='submit' onClick={this.login}>Log In</button>
+                </section>
             </div>
         )
     }

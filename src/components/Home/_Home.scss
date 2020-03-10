@@ -1,38 +1,52 @@
-/* // nav {
-//     display: flex;
-//     height: 100px;
-//     width: 100vw;
-//     border: 1px solid black
-// } */
+$navOverflow: hidden;
+$navBgColor: wheat;
+$navPosition: fixed;
+$navWidth: 100%;
+$navHeight: 75px;
+$navDisplay: flex;
+$navJustCon: space-around;
+$navAlItems: center;
 
-body {
-    display: flex
+
+
+.topnav {
+    overflow: $navOverflow; 
+    background-color: $navBgColor;
+    position: $navPosition;
+    width: $navWidth;
+    display: $navDisplay;
+    justify-content: $navJustCon;
+    align-items: $navAlItems;
+    height: $navHeight;
+}
+.crc {
+    color: royalblue;
+ 
+    font: {
+        weight: bolder;
+        family: cursive;
+        size: 190%;
+    }
 }
 .navbar {
-    display: flex;
-    flex-direction: row;
-}
-.topnav {
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden;
-    align-items: center;
+    background-color: wheat;
 }
 .topnav button {
     float: left;
     color: black;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     font-size: 17px;
     border: none;
+    cursor: pointer;
+    background-color: wheat;
 }
 .topnav button:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: royalblue;
+    color: white;
 }    
 .background-container {
-    height: 200px;
+    height: 500px;
     width: 100vw;
     border: 1px solid black
 }
@@ -55,9 +69,8 @@ body {
     font-size: 125%;
     flex-wrap: wrap;
 }
-
 .process {
-    height: 200px;
+    height: 250px;
     width: 100vw;
     border: 1px solid black;
     display: flex;
@@ -67,20 +80,16 @@ body {
     font-size: 190%;
     font-weight: bolder;
     margin: 30px;
-    
 }
 .process-boxes {
     display: flex;
     justify-content: space-evenly;
     width: 80vw;
-
-
 }
 .box1 {
     width: 150px;
     height: 150px;
     border: 1px solid black;
-  
 }
 .box2 {
     width: 150px;
@@ -93,7 +102,7 @@ body {
     border: 1px solid black
 }
 .education {
-    height: 200px;
+    height: 250px;
     width: 100vw;
     border: 1px solid black;
     display: flex;
@@ -105,7 +114,24 @@ body {
     margin: 30px;
     
 }
-/* img {
-    height: 500px;
-    width: 100vw
-} */
+.edbox1 {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black
+}
+.edbox2 {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black
+}
+.edbox3 {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black
+}
+.education-boxes {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80vw;
+}
+
