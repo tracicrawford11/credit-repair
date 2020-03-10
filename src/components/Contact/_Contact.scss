@@ -1,35 +1,109 @@
-.contact {
-  border: 1px solid black;
-  height: 100px;
-  width: 100vw
+.header {
+  
+    overflow: $navOverflow; 
+    background-color: wheat;
+    position: $navPosition;
+    width: $navWidth;
+    display: $navDisplay;
+    justify-content: $navJustCon;
+    align-items: $navAlItems;
+    height: $navHeight;
 }
 .boxes {
   display: flex;
-  border: 1px solid black;
-  height: 200px;
-  width: 100vw
+  justify-content: space-evenly;
+  align-items: center;
+  height: 300px;
+  width: 100vw;
+  padding-top: 30px
+  
 }
 .address {
-  border: 1px solid black;
-  height: 100px;
-  width: 150px
+  height: 200px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.envelope {
+  height: 50px;
+  width: 60px;
 }
 .phone {
-  border: 1px solid black;
-  height: 100px;
-  width: 150px
+  height: 200px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.phone-icon {
+  height: 50px;
+  width: 60px
 }
 .email {
-  border: 1px solid black;
-  height: 100px;
-  width: 150px
+  height: 200px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.email-icon {
+  height: 50px;
+  width: 60px
 }
 .hours {
-  border: 1px solid black;
-  height: 100px;
-  width: 150px
-}.inputs {
-  border: 1px solid black;
   height: 200px;
-  width: 100vw
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hours-icon {
+  height: 55px;
+  width: 60px
+}
+.inputs {
+  
+  height: 200px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px
+}
+select {
+  width: 200px;
+  height: 25px
+}
+.sub {
+  font-size: 15px;
+  cursor: pointer;
+  height: 25px;
+  width: 125px
+}
+.sub button:hover {
+  background-color: royalblue;
+  color: white;
+}  
+.bureaus {
+  height: 650px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px
+}
+// #bureau {
+//   text-align: center;
+// }
+.bureau-contact {
+  overflow: hidden;
+  height: 700px;
+  width: 80vw;
+  padding: 20px
 }
