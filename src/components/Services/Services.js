@@ -22,13 +22,15 @@ render() {
     
     return (
       <div key={index.id}>
+        
         <h1>{val.prod_name}</h1>
+        <button className='add-cart'onClick={() => this.props.addToCart(val)}>Add to Cart</button>
         <br/>
         <h2>{val.description}</h2>
         <h2>${val.price}</h2>
         <br/>
-        <button onClick={() => this.props.addToCart(val)}>Add to Cart</button>
-        <br/>
+        
+        
       </div>
     )
   })

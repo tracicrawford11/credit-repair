@@ -18,7 +18,7 @@ render () {
                 </ul>
             </nav>
             <section className='background-container'>
-                
+                <img src='https://www.lexingtonlaw.com/content/dam/lexington-law/assets/images/seo-articles/content-image/credit-repair-company/2-benefits-of-repairing-your-credit.jpg' alt='benefits'/>
             </section>
 
             <section className='expectations'>

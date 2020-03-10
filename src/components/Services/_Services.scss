@@ -17,11 +17,6 @@
         size: 190%;
     }
 }
-.navbar {
-    display: flex;
-    flex-direction: row;
-    background-color: wheat;
-}
 .services button {
     float: left;
     color: black;
@@ -34,9 +29,19 @@
     background-color: wheat;
 }
 .services button:hover {
-    background-color: royalblue;
-    color: white;
+    background-color: $btnHovBgColor;
+    color: $btnHovTextColor;
 } 
+.add-cart {
+    font-size: 17px;
+    cursor: pointer;
+    background-color: wheat;
+    margin: 5px
+}
+.add-cart button:hover {
+    background-color: $btnHovBgColor;
+    color: $btnHovTextColor;
+}
 .mapped-services {
     width: 90vw;
     margin: 80px
@@ -48,43 +53,3 @@ h1 {
         size: 150%;
     }  
 }
-
-
-
-
-// header {
-//     display: flex;
-//     border: 1px solid black;
-//     height: 100px;
-//     width: 100vw
-// }
-// .consult {
-//     border: 1px solid black;
-//     height: 150px;
-//     width: 100vw;
-// }
-// .letter {
-//     border: 1px solid black;
-//     height: 150px;
-//     width: 100vw
-// }
-// .basic {
-//     border: 1px solid black;
-//     height: 150px;
-//     width: 100vw
-// }
-// .moderate {
-//     border: 1px solid black;
-//     height: 150px;
-//     width: 100vw
-// }
-// .aggressive {
-//     border: 1px solid black;
-//     height: 150px;
-//     width: 100vw
-// }
-// .inquiries {
-//     border: 1px solid black;
-//     height: 100px;
-//     width: 100vw
-// }

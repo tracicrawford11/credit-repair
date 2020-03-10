@@ -1,3 +1,4 @@
+//Nav Variables
 $navOverflow: hidden;
 $navBgColor: wheat;
 $navPosition: fixed;
@@ -6,6 +7,16 @@ $navHeight: 75px;
 $navDisplay: flex;
 $navJustCon: space-around;
 $navAlItems: center;
+
+//Button Hover Variables
+$btnHovBgColor: royalblue;
+$btnHovTextColor: white;
+
+//H1 Variables
+$h1Color: royalblue;
+$h1FtWeight: bolder;
+$h1FtFamily: cursive;
+$h1FtSize: 190%;
 
 
 
@@ -20,35 +31,43 @@ $navAlItems: center;
     height: $navHeight;
 }
 .crc {
-    color: royalblue;
+    color: $h1Color;
  
     font: {
-        weight: bolder;
-        family: cursive;
-        size: 190%;
+        weight: $h1FtWeight;
+        family: $h1FtFamily;
+        size: $h1FtSize;
     }
 }
 .navbar {
-    background-color: wheat;
+    background-color: $navBgColor;
+    display: $navDisplay;
+    
 }
 .topnav button {
     float: left;
     color: black;
     text-align: center;
     padding: 14px 16px;
+    text-decoration: none;
     font-size: 17px;
     border: none;
     cursor: pointer;
     background-color: wheat;
 }
 .topnav button:hover {
-    background-color: royalblue;
-    color: white;
+    background-color: $btnHovBgColor;
+    color: $btnHovTextColor;
 }    
 .background-container {
     height: 500px;
     width: 100vw;
     border: 1px solid black
+}
+img {
+    height: 500px;
+    width: 100vw;
+    margin-top: 60px;
 }
 .expectations {
     height: 200px;
@@ -57,6 +76,7 @@ $navAlItems: center;
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-top: 60px
 }
 .exp {
     font-size: 190%;
