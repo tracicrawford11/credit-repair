@@ -18,57 +18,53 @@ render () {
                 </ul>
             </nav>
             <section className='background-container'>
-                <img src='https://www.lexingtonlaw.com/content/dam/lexington-law/assets/images/seo-articles/content-image/credit-repair-company/2-benefits-of-repairing-your-credit.jpg' alt='benefits'/>
+                {/* <img src='https://www.lexingtonlaw.com/content/dam/lexington-law/assets/images/seo-articles/content-image/credit-repair-company/2-benefits-of-repairing-your-credit.jpg' alt='benefits'/> */}
+                <img className='fix-credit' src='https://www.badcredit.org/wp-content/uploads/2019/05/free-credit-repair-feat.jpg' alt='Fix'/>
             </section>
 
             <section className='expectations'>
-                <h1 className='exp'>We set high expectations</h1>
-                <p className='parexp'>We set high expectations for ourselves as a credit repair company. You can expect only the 
-                   best service from our team of credit experts. In the financial industry, we are well respected 
-                   and dedicated to helping our clients to get back on their best financial track. We are here to 
-                   assist you on your journey. We work with credit bureaus and creditors to fix and rebuild tarnished credit.
-                   Let our services and experience speak itself.
+                <h1 className='exp'>Introducing the next generation of credit repair.</h1>
+                <p className='parexp'>We are an innovative team of dedicated, passionate, and remarkable individuals determined to help you repair the financial defects on your record and get you on the road to financial freedom.
                 </p>
             </section>
-
-            <section className='process'>
-                <h1 className='proc'>The Process</h1>
-                <article className='process-boxes'>
-                    <a className='box1'>
-                        <h1>Analyze</h1>
-                        <br/>
-                        <p>We work with you to identify any questionable negative item hurting your score.</p>
-                    </a>
-                    <a className='box2'>
-                        <h1>Address</h1>
-                        <br/>
-                        <p>We challenge those negative item with the bureaus and your creditors.</p>
-                    </a>
-                    <a className='box3'>
-                        <h1>Accelerate</h1>
-                        <br/>
-                        <p>We keep the process going, helping you reach your credit goals.</p>
-                    </a>
-                </article>
+            <section className='images'>
+                <img className='benefits' src='https://www.lexingtonlaw.com/content/dam/lexington-law/assets/images/seo-articles/content-image/credit-repair-company/2-benefits-of-repairing-your-credit.jpg' alt='benefits' />
+                <img className='advantage' src='https://www.lexingtonlaw.com/content/dam/lexington-law/assets/images/seo-articles/content-image/credit-repair-company/5-advantages-of-credit-repair-company.jpg' alt='advantage' />
             </section>
 
             <section className='education'>
                 <h1 className='edu'>Education</h1>
                 <article className='education-boxes'>
                     <a className='edbox1'>
-                        <h1>Is Credit Repair Legal?</h1>
-                        <p>Credit repair is a legal option for those with less-than-great credit scores. 
-                        However, before working with just any company that promises to improve credit scores, 
-                        it is important to determine whether or not that company is operating within the 
-                        boundaries of the law.</p>
+                       <img className='myth1' src='https://www.creditlawcenter.com/wp-content/uploads/2017/06/Top-5-Credit-Myths-1_Page_10.jpg' alt='errors'/> 
                     </a>
                     <a className='edbox2'>
-                        <h1>What Makes Up Your Score?</h1>
+                        <img className='fact1' src='https://www.creditlawcenter.com/wp-content/uploads/2017/06/Top-5-Credit-Myths-1_Page_11.jpg' alt='errors'/> 
                     </a>
                     <a className='edbox3'>
-
+                        <img className='scores' src='https://bankonus.com/finance-expert/wp-content/uploads/2018/11/Good-Credit-Score.jpg' alt='Credit' />
                     </a>
                 </article>
+            </section>
+
+            <section className='education2'>
+                <h1 className='edu2'>Education</h1>
+                <article className='education-boxes2'>
+                    <a className='edbox1-2'>
+                        <img className='myth2' src='https://www.creditlawcenter.com/wp-content/uploads/2017/06/Top-5-Credit-Myths-1_Page_08.jpg' alt='scores' />
+                    </a> 
+                    <a className='edbox2-2'>
+                       <img className='fact2' src='https://www.creditlawcenter.com/wp-content/uploads/2017/06/Top-5-Credit-Myths-1_Page_09.jpg' alt='scores' />
+                    </a>
+                    <a className='edbox3-2'>
+                        <img className='summary2' src='https://thecreditpros.com/wp-content/uploads/2018/06/how-credit-scores-are-built.gif' alt='Credit' />
+                    </a>
+                </article>
+            </section>
+
+            <section className='process'>
+                <h1 className='proc'>The Process</h1>
+                <img className='steps' src='https://www.jtaylorandassociates.com/images/process.png' alt='steps' />
             </section>
 
         </div>
