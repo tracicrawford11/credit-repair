@@ -65,7 +65,7 @@ app.post('/pay', async (request, response) => {
     try {
       // Create the PaymentIntent
       let intent = await stripe.paymentIntents.create({
-        amount: 1099,
+        amount: 89999,
         currency: 'usd',
         payment_method: request.body.payment_method_id,
   

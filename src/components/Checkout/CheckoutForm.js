@@ -1,5 +1,7 @@
 import React from 'react';
 import { ElementsConsumer, CardElement } from '@stripe/react-stripe-js';
+import {Link} from 'react-router-dom';
+
 
 class CheckoutForm extends React.Component {
   handleSubmit = async (event) => {
@@ -14,7 +16,7 @@ class CheckoutForm extends React.Component {
       card: elements.getElement(CardElement),
       billing_details: {
         // Include any additional collected billing details.
-        name: 'Jenny Rosen',
+        name: 'Traci Forte',
       }
     });
 
@@ -60,13 +62,24 @@ class CheckoutForm extends React.Component {
     const { stripe } = this.props;
 
     return (
-        <form onSubmit={this.handleSubmit}>
-          <CardElement onChange={this.handleCardChange} />
-          <button type="submit" disabled={!stripe}>
-            Submit Payment
-        </button>
-        </form>
+        <div>
+          <header>
+            <h1>Enter Card Information for Checkout</h1>
+          </header>
+          <form onSubmit={this.handleSubmit}>
+            <CardElement onChange={this.handleCardChange} />
+            <br/>
+            <button className='sub-pmt' type="submit" disabled={!stripe}>
+              Submit Payment
+          </button>
+          <section className='submit-btn'>
+            <Link to='/'><button className='return-button'>Cancel and Return to Home</button></Link>
+          </section>
+          </form>
+        </div>
+        
     );
+    
   }
 }
 

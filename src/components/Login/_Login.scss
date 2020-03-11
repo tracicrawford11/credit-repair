@@ -4,7 +4,7 @@ header {
     background-color: wheat;
     display: flex;
     align-items: center;
-   
+    justify-content: center;
 }
 h1 {
     color: royalblue;
@@ -15,9 +15,15 @@ h1 {
         size: 190%;
     }
 }
+.login {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px
+}
 .log {
     font-size: 15px;
     cursor: pointer;
+    width: 100px
 }
 .log button:hover {
     background-color: royalblue;
@@ -27,3 +33,28 @@ input {
     height: 20px;
     width: 200px
 }  
+.return {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 20px
+}
+.return-button {
+    font-size: 15px;
+    cursor: pointer;
+    height: 30px
+}
+.return-button button:hover {
+    background-color: royalblue;
+    color: white;
+}
+@media (max-width: 578px) {
+    .login {
+        flex-direction: column;
+        align-items: center;
+    }  
+    header {
+        flex-wrap: wrap;
+        
+    }  
+}

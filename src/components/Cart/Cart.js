@@ -45,6 +45,9 @@ class Cart extends Component {
           {addedServices}
           <br/>
         </ul>
+        <section className='submit-btn'>
+          <Link to='/'><button className='return-button'>Cancel and Return to Home</button></Link>
+        </section>
       </div>
     )
   }

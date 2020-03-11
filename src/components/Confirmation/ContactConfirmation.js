@@ -12,7 +12,10 @@ render() {
             <br/>
             <h1 className='contact-thanks'>Thank you for contacting CRC. A representative will contact you via your preferred method within 24 business hours.</h1>
             <br/>
-            <Link to="/"><button>Return to Home</button></Link>
+        <section className='homeContact-btn'>
+          <Link to='/'><button>Return to Home</button></Link>
+        </section>
+
         </div>
 
     )

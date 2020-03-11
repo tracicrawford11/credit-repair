@@ -1,0 +1,49 @@
+header {
+    margin-bottom: 30px;
+}
+.mapped-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.update-phone {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px
+}
+.sub {
+    font-size: 15px;
+    cursor: pointer;
+    width: 100px
+}
+.sub button:hover {
+    background-color: royalblue;
+    color: white;
+}  
+input {
+    height: 20px;
+    width: 200px
+} 
+.update {
+    font-size: 15px;
+    cursor: pointer;
+    
+} 
+.update button:hover {
+    background-color: royalblue;
+    color: white;
+}
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px
+}
+.return-button {
+    font-size: 15px;
+    cursor: pointer;
+    height: 30px;
+}
+.return-button button:hover {
+    background-color: royalblue;
+    color: white;
+}

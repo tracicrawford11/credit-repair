@@ -1,25 +1,33 @@
 .contact-confirm {
-    border: 1px solid black;
     height: 100px;
-    width: 100vw
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 .contact-thanks {
-    border: 1px solid black;
     height: 100px;
-    width: 100vw
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
-
+.homeContact-btn {
+    display: flex;
+    justify-content: center;
+}
 .getstarted-confirm {
-    border: 1px solid black;
     height: 100px;
-    width: 100vw
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 .getstarted-thanks {
-    border: 1px solid black;
     height: 100px;
-    width: 100vw
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
-
 .order-confirm {
     border: 1px solid black;
     height: 100px;
@@ -29,4 +37,17 @@
     border: 1px solid black;
     height: 100px;
     width: 100vw
+}
+.home-btn {
+    display: flex;
+    justify-content: center;
+}
+button {
+    font-size: 15px;
+    cursor: pointer;
+    height: 30px;
+}
+button button:hover {
+    background-color: royalblue;
+    color: white;
 }

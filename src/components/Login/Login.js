@@ -38,6 +38,9 @@ class Login extends React.Component {
                     <input placeholder="Password" onChange={(e) => this.setState({ password: e.target.value})} />
                     <button className='log' type='submit' onClick={this.login}>Log In</button>
                 </section>
+                <section className='return'>
+                <Link to='/'><button className='return-button'>Cancel and Return to Home</button></Link>
+                </section>
             </div>
         )
     }

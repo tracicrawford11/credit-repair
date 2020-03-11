@@ -39,19 +39,26 @@ class GetStarted extends Component {
             return <Redirect to = '/login' />
         }
         return (
-            <div className="inputs">
-                <input onChange={this.handleChange} name ='first_name' placeholder='First Name' />
-                <input onChange={this.handleChange} name ='last_name' placeholder='Last Name' />
-                <input onChange={this.handleChange} name='email' placeholder='Email' />
-                <input onChange={this.handleChange} name='password' placeholder='Password' />
-                <input onChange={this.handleChange} name='phone' placeholder='Phone Number' />
-                <input onChange={this.handleChange} name='state' placeholder='State Abbreviated' />
-                <select onChange={this.handleChange} name='goal_id'>{this.state.goalAnswers.map(answer => (
-                    <option value={+answer.goal_id}>{answer.goal}</option>))}
-                <option value="" disabled selected hidden>Select your goal</option>
-                </select>
-                {/* <input onChange ={this.handleChange} name = 'message' placeholder='message'/> */}
-                <Link to='/getstartedconfirmation'><button onClick={this.handleClick}>Submit</button></Link>
+            <div>
+                <header>
+                    <h1>New Client Registration</h1>
+                </header>
+                <div className="inputs">
+                    <input onChange={this.handleChange} name ='first_name' placeholder='First Name' />
+                    <input onChange={this.handleChange} name ='last_name' placeholder='Last Name' />
+                    <input onChange={this.handleChange} name='email' placeholder='Email' />
+                    <input onChange={this.handleChange} name='password' placeholder='Password' />
+                    <input onChange={this.handleChange} name='phone' placeholder='Phone Number' />
+                    <input onChange={this.handleChange} name='state' placeholder='State Abbreviated' />
+                    <select onChange={this.handleChange} name='goal_id'>{this.state.goalAnswers.map(answer => (
+                        <option value={+answer.goal_id}>{answer.goal}</option>))}
+                    <option value="" disabled selected hidden>Select your goal</option>
+                    </select>
+                    {/* <input onChange ={this.handleChange} name = 'message' placeholder='message'/> */}
+                    <Link to='/getstartedconfirmation'><button className='sub-btn' onClick={this.handleClick}>Submit</button></Link>
+                    <Link to='/'><button className='return-button'>Cancel and Return to Home</button></Link>
+                </div>
+                
             </div>
         )
     }

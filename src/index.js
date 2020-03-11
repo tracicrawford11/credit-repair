@@ -8,7 +8,7 @@ import store from './redux/store'
 import './styles/main.css'
 
 // //Stripe imports
-import { StripeProvider, Elements } from '@stripe/react-stripe-js'
+import  {Elements} from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
 import CheckoutForm from './components/Checkout/CheckoutForm'
 
